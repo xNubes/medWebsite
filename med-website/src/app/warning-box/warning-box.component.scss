@@ -1,0 +1,38 @@
+@import 'src/colors.scss';
+
+.warning-box {
+    display: flex;
+    width: 80.875rem;
+    justify-content: center;
+    align-items: center; 
+    background: $warn-color-light; 
+    max-width: 90%;
+    margin: auto;
+    border: 2px solid $warn-color;
+    
+}
+
+.outer-box{
+    background: $primary-color-light;
+    height: 15rem;
+}
+
+.warning-message {
+    display: flex;
+    width: 60rem;
+    height: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0; 
+    max-width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+
+.block {
+    height: 4.25rem;
+}

@@ -1,0 +1,50 @@
+@import 'src/colors.scss';
+
+.filler {
+    height: 5.5rem;
+}
+
+.small-filler {
+    height: 2.5rem;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+h3 {
+    text-align: center;
+
+}
+mat-card {
+    text-align: center;
+    width: 30rem;
+    max-width: 40%;
+}
+
+mat-card-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+mat-card:hover {
+    color: white;
+    background: $primary-color;
+    cursor: pointer;
+}
+
+.container::after {
+    content: '';
+    width: 30rem;
+    max-width: 40%;
+}

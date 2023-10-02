@@ -1,0 +1,23 @@
+<div class="background">
+    <div class="text-box">
+        <h1>Als Fachärzt:innen für Allgemeinmedizin und Innere Medizin führen wir an einem Standort eine hausärztlich orientierte Praxis.</h1>
+    </div>
+    <div class="outer-box">
+        <div class="picture-switch-box">
+            <div class="switch-container"> 
+                <!-- <button (click)="changeAdvertisement(0)" class="switch-a-box">
+                    <span class="switch-a">Unsere Hauptpraxis befindet sich im Ärztehaus Großhansdorf/Schmalenbeck.</span>
+                </button> -->
+                <!-- <button (click)="changeAdvertisement(1)" class="switch-b-box">
+                    <span class="switch-b">Unsere Zweigpraxis Am Hagen befindet sich im Dänenweg 2 in Ahrensburg.</span>
+                </button> -->
+            </div>   
+            <mat-card class="picture-box">
+                <img mat-card-image id="image" [src]="advertisementCard.imgUrl">
+                <mat-card-header id="header">{{ advertisementCard.header }}</mat-card-header>
+                <mat-card-content id="text">{{ advertisementCard.contentText }}</mat-card-content>
+            </mat-card>
+        </div>
+
+    </div>
+</div>

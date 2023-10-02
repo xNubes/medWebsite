@@ -1,0 +1,83 @@
+$med-website-primary-palette: (
+  50: #e6ebf2,
+  100: #c0cddf,
+  200: #97acc9,
+  300: #6e8cb3,
+  400: #4c73a5,
+  500: #245c98,
+  600: #1b548f,
+  700: #0f4a83,
+  800: #064077,
+  900: #00305f,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #FFFFFF,
+    600: #FFFFFF,
+    700: #FFFFFF,
+    800: #FFFFFF,
+    900: #FFFFFF,
+  )
+);
+
+
+$med-website-accent-palette: (
+  50: #e4f2fe,
+  100: #bddffe,
+  200: #92cbff,
+  300: #68b6fe,
+  400: #48a6fe,
+  500: #2f97fc,
+  600: #2e89ee,
+  700: #2b77da,
+  800: #2865c8,
+  900: #2347a9,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #FFFFFF,
+    600: #FFFFFF,
+    700: #FFFFFF,
+    800: #FFFFFF,
+    900: #FFFFFF,
+  )
+);
+
+$med-website-warn-palette: (
+  50: #fee8e7,
+  100: #ffcabb,
+  200: #ffa68f,
+  300: #ff8162,
+  400: #ff6140,
+  500: #ff3c1e,
+  600: #ff3519,
+  700: #fb2c13,
+  800: #ed220d,
+  900: #d50000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #FFFFFF,
+    600: #FFFFFF,
+    700: #FFFFFF,
+    800: #FFFFFF,
+    900: #FFFFFF,
+  )
+);
+
+
+$primary-color: map-get($med-website-primary-palette, 900);
+$primary-color-light: map-get($med-website-primary-palette, 50);
+$accent-color: map-get($med-website-accent-palette, 800);
+$accent-color-light: map-get($med-website-accent-palette, 300);
+$warn-color: map-get($med-website-warn-palette, 900);
+$warn-color-light: map-get($med-website-warn-palette, 100);

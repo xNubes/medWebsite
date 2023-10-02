@@ -1,0 +1,24 @@
+@use '@angular/material' as mat;
+@import 'colors.scss';
+@include mat.core();
+
+
+
+$med-primary: mat.define-palette($med-website-primary-palette);
+$med-accent: mat.define-palette($med-website-accent-palette);
+$med-warn: mat.define-palette($med-website-warn-palette);
+
+$med-website-app-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $med-primary,
+        accent: $med-accent,
+        warn: $med-warn,
+      ),
+        typography: mat.define-typography-config(),
+        density: 0,
+    )
+);
+
+@include mat.all-component-themes($med-website-app-theme);
+

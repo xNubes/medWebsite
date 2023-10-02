@@ -1,0 +1,11 @@
+.outer-box {
+    display: flex;
+    flex-flow: column;
+    height: calc( 100vh - 5.5rem); 
+    height: 100%;
+}
+
+footer {
+    position:fixed;
+    bottom:0px;
+}

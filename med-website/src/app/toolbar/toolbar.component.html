@@ -1,0 +1,43 @@
+<div>
+  <mat-toolbar class="top-navbar">
+    <a routerLink="/praxis">
+      <img class="logo" src="\assets\Lo_Welle_Turm_C.png" style="width:300px;height:92px;">
+    </a>
+
+    <ul class="nav-menu">
+      <li>
+        <a class="header-text praxis" routerLink="/praxis" routerLinkActive="activeLink">PRAXIS</a>
+      </li>
+      <li>
+        <a class="header-text oeffnungszeiten" routerLink="/zeiten" routerLinkActive="activeLink">ÖFFNUNGSZEITEN</a>
+      </li>
+      <li>
+        <a class="header-text leistungen" routerLink="/leistungen" routerLinkActive="activeLink">LEISTUNGEN</a>
+      </li>
+      <li>
+        <a class="header-text kontakt" routerLink="/kontakt" routerLinkActive="activeLink">KONTAKT</a>
+      </li>
+      <li>
+        <a class="header-text anfahrt" routerLink="/anfahrt" routerLinkActive="activeLink">ANFAHRT</a>
+      </li>
+      <li>
+        <a class="header-text termine" href="https://webtermin.medatixx.de/#/d8fa1387-96af-4660-bcef-be3b07d35962/search" target="_blank">TERMINE</a>
+      </li>
+      <li>
+        <a class="header-text jobs" routerLink="/jobs" routerLinkActive="activeLink">JOBS</a>
+      </li>
+    </ul>
+      <button mat-button [matMenuTriggerFor]="menu" class="burger-menu" >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" class="menu">
+          <button mat-menu-item class="button-text praxis" routerLink="/praxis">PRAXIS</button>
+          <button mat-menu-item class="button-text oeffnungszeiten" routerLink="/zeiten">ÖFFNUNGSZEITEN</button>
+          <button mat-menu-item class="button-text leistungen" routerLink="/leistungen">LEISTUNGEN</button>
+          <button mat-menu-item class="button-text kontakt" routerLink="/kontakt">KONTAKT</button>
+          <button mat-menu-item class="button-text anfahrt" routerLink="/anfahrt">ANFAHRT</button>
+          <button mat-menu-item class="button-text termine" routerLink="/termine">TERMINE</button>
+          <button mat-menu-item class="button-text jobs" routerLink="/jobs">JOBS</button>
+      </mat-menu>
+  </mat-toolbar>
+</div>

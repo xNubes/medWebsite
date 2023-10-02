@@ -1,0 +1,33 @@
+@import 'src/colors.scss';
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+.filler {
+    height: 5.5rem;
+}
+
+h2 {
+    margin-left: 2rem;
+}
+
+
+
+.container, h3 {
+    display: flex;
+    margin-left: 4rem;
+}
+
+.inner-container {
+    display: flex;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+mat-icon {
+    align-self: center;
+    margin-right: 1rem;
+}

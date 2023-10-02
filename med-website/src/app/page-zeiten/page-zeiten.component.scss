@@ -1,0 +1,49 @@
+@import 'src/colors.scss';
+
+.filler {
+    height: 5.5rem;
+}
+.outer-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.termin-link {
+    background-color: $primary-color; 
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: .25rem;
+    
+}
+
+.rounded-box {
+    max-width: 80%;
+    height: fit-content;
+    background: $primary-color-light;
+    text-align: center;
+    margin: 5rem 0 5rem 0;
+
+}
+
+.day-column {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+

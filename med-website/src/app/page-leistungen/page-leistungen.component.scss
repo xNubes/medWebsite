@@ -1,0 +1,104 @@
+@import 'src/colors.scss';
+
+.blocker {
+    margin-top: 5.5rem;
+}
+
+img{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img-div {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 2.5vw;
+}
+
+h3 {
+    font-size: 2vw;
+    max-width: 80%;
+    text-align: center;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-text {
+    font-size: 1.7rem;
+    display: inline;
+
+}
+
+mat-card-content {
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.rounded-box {
+    max-width: 100%;
+    background-color: $primary-color-light;
+    text-align: center;
+    height: 10rem;
+    width: 25rem;
+    margin: 1rem;
+}
+
+.rounded-box button p {
+    font-size: 1.5vw;
+}
+
+.rounded-box button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: $primary-color-light;
+}
+
+
+.rounded-box:hover {
+    color: white;
+    background: $primary-color;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 1200px){
+    .rounded-box button p {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .rounded-box button p {
+        font-size: 1rem;
+    }
+}

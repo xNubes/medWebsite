@@ -1,0 +1,37 @@
+
+<div class="outer-box">
+  <mat-card>
+
+    <div class="filler"></div>
+    <mat-card-header>Kontaktfomular</mat-card-header>
+    <div class="filler"></div>
+    <mat-form-field>
+      <mat-label>Name:</mat-label>
+      <input matInput placeholder="Max Mustermann" id="name" type="text" [formControl]="name">
+      <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>E-Mail:</mat-label>
+      <input matInput placeholder="max@mustermann.de" id="email" type="email" [formControl]="email">
+      <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Betreff:</mat-label>
+      <input matInput id="subject" type="text" [formControl]="subject">
+      <mat-error *ngIf="subject.invalid">{{getErrorMessageSubject()}}</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Nachricht:</mat-label>
+      <textarea matInput id="message" type="text" [formControl]="text"></textarea>
+      <mat-error *ngIf="text.invalid">{{getErrorMessageText()}}</mat-error>
+    </mat-form-field>
+    
+    <re-captcha (resolved)="resolved($event)" siteKey="6Leuj1koAAAAALkrG14WznMjvzECBqY1P4gTxAFA"></re-captcha>
+    <button mat-button>Abschicken</button>
+    <div class="filler"></div>
+  </mat-card>
+</div>
+

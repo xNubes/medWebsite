@@ -1,0 +1,28 @@
+@import 'src/colors.scss';
+
+.outer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+.filler {
+    height: 3rem;
+}
+
+mat-card {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 5rem 0 5rem  0;
+}
+
+mat-form-field {
+    max-width: 70%;
+    width: 50rem;
+}
+
+mat-card-header {
+    font-size: 2rem;
+}
