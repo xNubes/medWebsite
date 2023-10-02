@@ -34,7 +34,7 @@
     
 .welcome-picture {
     border-radius: 0 0.25rem 0.25rem 0;
-    margin-top: 0.3rem;
+    margin-top: 0.4rem;
     max-width: 100%;
     object-fit: cover;
     }
@@ -66,7 +66,7 @@
         }
       }
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 900px) {
 
 
         .welcome-text {

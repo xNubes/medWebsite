@@ -33,6 +33,7 @@ import {MatInputModule} from '@angular/material/input';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { PageDatenschutzComponent } from './page-datenschutz/page-datenschutz.component';
+import { PageTeamComponent } from './page-team/page-team.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { PageDatenschutzComponent } from './page-datenschutz/page-datenschutz.co
     ContactFormComponent,
     ImpressumComponent,
     PageDatenschutzComponent,
+    PageTeamComponent,
   ],
   imports: [
     BrowserModule,
