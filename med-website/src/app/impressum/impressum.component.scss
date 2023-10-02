@@ -12,12 +12,18 @@ h1 {
 
 mat-card-header {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 800;
+    margin-left: 1rem;
 }
 
 mat-card-subtitle {
-    margin: 1rem 0 1rem 1rem;
-    font-size: 1rem;
+    margin: 1rem 0 0 3rem;
+    font-size: larger;
+    font-weight: 400;
+}
+
+mat-card-content {
+    margin: 0 2rem 0 2rem;
 }
 
 .italic {
