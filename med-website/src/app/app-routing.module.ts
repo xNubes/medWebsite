@@ -11,6 +11,7 @@ import { PageLeistungenComponent } from './page-leistungen/page-leistungen.compo
 import { PageTermineComponent } from './page-termine/page-termine.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { PageDatenschutzComponent } from './page-datenschutz/page-datenschutz.component';
+import { PageTeamComponent } from './page-team/page-team.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'termine', component: PageTermineComponent},
   {path: 'impressum', component: ImpressumComponent},
   {path: 'datenschutz', component: PageDatenschutzComponent},
+  {path: 'team', component: PageTeamComponent},
 ];
 
 @NgModule({
