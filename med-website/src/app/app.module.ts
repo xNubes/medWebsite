@@ -35,6 +35,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { PageDatenschutzComponent } from './page-datenschutz/page-datenschutz.component';
 import { PageTeamComponent } from './page-team/page-team.component';
 import { HttpClientModule } from "@angular/common/http";
+import { GoogleMapsModule } from '@angular/google-maps'
 
 
 @NgModule({
@@ -58,6 +59,8 @@ import { HttpClientModule } from "@angular/common/http";
     ImpressumComponent,
     PageDatenschutzComponent,
     PageTeamComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -75,6 +78,7 @@ import { HttpClientModule } from "@angular/common/http";
     MatSelectModule,
     RecaptchaModule,
     HttpClientModule,
+    GoogleMapsModule,
 
   ],
   providers: [],

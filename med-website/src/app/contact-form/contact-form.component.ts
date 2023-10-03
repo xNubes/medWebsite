@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators} from '@angular/forms';
 import { EmailService } from '../email.service';
@@ -77,15 +76,15 @@ getErrorMessageMessage() {
   }
 
   
-  onSubmit() {
-    this.emailService.sendEmail(this.name, this.email, this.subject, this.message).subscribe(
-      response => {
-        console.log('Email sent successfully!');
-      },
-      error => {
-        console.log('Error sending email:', error);
-      }
-    );
-  }
+  // onSubmit() {
+  //   this.emailService.sendEmail(this.name, this.email, this.subject, this.message, this.captcha).subscribe(
+  //     response => {
+  //       console.log('Email sent successfully!');
+  //     },
+  //     error => {
+  //       console.log('Error sending email:', error);
+  //     }
+  //   );
+  // }
 }
 
