@@ -34,6 +34,8 @@ import { RecaptchaModule } from 'ng-recaptcha';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { PageDatenschutzComponent } from './page-datenschutz/page-datenschutz.component';
 import { PageTeamComponent } from './page-team/page-team.component';
+import { HttpClientModule } from "@angular/common/http";
+
 
 @NgModule({
   declarations: [
@@ -72,6 +74,7 @@ import { PageTeamComponent } from './page-team/page-team.component';
     MatInputModule,
     MatSelectModule,
     RecaptchaModule,
+    HttpClientModule,
 
   ],
   providers: [],

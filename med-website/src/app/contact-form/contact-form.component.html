@@ -7,30 +7,30 @@
     <div class="filler"></div>
     <mat-form-field>
       <mat-label>Name:</mat-label>
-      <input matInput placeholder="Max Mustermann" id="name" type="text" [formControl]="name">
+      <input matInput placeholder="Max Mustermann" id="name" type="text" [(ngModel)]="name" [formControl]="name">
       <mat-error *ngIf="name.invalid">{{getErrorMessageName()}}</mat-error>
     </mat-form-field>
     
     <mat-form-field>
       <mat-label>E-Mail:</mat-label>
-      <input matInput placeholder="max@mustermann.de" id="email" type="email" [formControl]="email">
+      <input matInput placeholder="max@mustermann.de" id="email" type="email" [(ngModel)]="email" [formControl]="email">
       <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
     </mat-form-field>
     
     <mat-form-field>
       <mat-label>Betreff:</mat-label>
-      <input matInput id="subject" type="text" [formControl]="subject">
+      <input matInput id="subject" type="text" [formControl]="subject" [(ngModel)]="subject">
       <mat-error *ngIf="subject.invalid">{{getErrorMessageSubject()}}</mat-error>
     </mat-form-field>
   
     <mat-form-field>
       <mat-label>Nachricht:</mat-label>
-      <textarea matInput id="message" type="text" [formControl]="text"></textarea>
-      <mat-error *ngIf="text.invalid">{{getErrorMessageText()}}</mat-error>
+      <textarea matInput id="message" type="text" [formControl]="message" [(ngModel)]="message"></textarea>
+      <mat-error *ngIf="message.invalid">{{getErrorMessageMessage()}}</mat-error>
     </mat-form-field>
     
     <re-captcha (resolved)="resolved($event)" siteKey="6Leuj1koAAAAALkrG14WznMjvzECBqY1P4gTxAFA"></re-captcha>
-    <button mat-button>Abschicken</button>
+    <button mat-button type="submit">Abschicken</button>
     <div class="filler"></div>
   </mat-card>
 </div>

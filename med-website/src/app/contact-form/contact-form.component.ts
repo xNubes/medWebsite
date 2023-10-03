@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators} from '@angular/forms';
-
+import { EmailService } from '../email.service';
 
 
 @Component({
@@ -8,12 +9,13 @@ import { FormBuilder, FormControl, Validators} from '@angular/forms';
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss']
 })
-export class ContactFormComponent {
+export class ContactFormComponent  {
   email = new FormControl('', [Validators.required, Validators.email]);
   name = new FormControl('', [Validators.required]);
   subject = new FormControl('', [Validators.required]);
-  text = new FormControl('', [Validators.required]);
+  message = new FormControl('', [Validators.required]);
   captcha: string;
+
 
   getErrorMessageName() {
     if (this.name.hasError('required')) {
@@ -28,7 +30,7 @@ export class ContactFormComponent {
       return 'Sie müssen einen Betreff eingeben';
     }
 
-    if (this.text.hasError('required')) {
+    if (this.message.hasError('required')) {
       return 'Sie müssen eine Nachricht eingeben';
     }
 
@@ -54,14 +56,14 @@ export class ContactFormComponent {
     return this.subject.hasError('subject') ? 'Kein gültiger Betreff ' : '';
 }
 
-getErrorMessageText() {
+getErrorMessageMessage() {
 
 
-  if (this.text.hasError('required')) {
+  if (this.message.hasError('required')) {
     return 'Sie müssen eine Nachricht eingeben';
   }
 
-  return this.text.hasError('text') ? 'Keine gültige Nachricht ' : '';
+  return this.message.hasError('text') ? 'Keine gültige Nachricht ' : '';
 }
 
   constructor() {
@@ -73,4 +75,17 @@ getErrorMessageText() {
     this.captcha = captchaResponse;
     console.log('resolved captcha with response:' +this.captcha);
   }
+
+  
+  onSubmit() {
+    this.emailService.sendEmail(this.name, this.email, this.subject, this.message).subscribe(
+      response => {
+        console.log('Email sent successfully!');
+      },
+      error => {
+        console.log('Error sending email:', error);
+      }
+    );
+  }
 }
+
