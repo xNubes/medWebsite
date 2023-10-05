@@ -1,7 +1,7 @@
 @import 'src/colors.scss';
 
 .blocker {
-    margin-top: 5.5rem;
+    height: 5.5rem;
 }
 
 img{
@@ -25,6 +25,7 @@ img{
 
 h2 {
     font-size: 2.5vw;
+    margin-top: 2rem;
 }
 
 h3 {
@@ -85,6 +86,9 @@ mat-card-content {
     cursor: pointer;
 }
 
+.big-blocker {
+    height: 12rem;
+}
 
 @media screen and (min-width: 1200px){
     .rounded-box button p {

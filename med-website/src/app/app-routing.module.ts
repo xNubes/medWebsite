@@ -15,7 +15,7 @@ import { PageTeamComponent } from './page-team/page-team.component';
 
 
 const routes: Routes = [
-  { path: 'praxis', component: PagePraxisComponent },
+  {path: '', component: PagePraxisComponent},
   { path: 'zeiten', component: PageZeitenComponent },
   {path: 'anfahrt', component: PageAnfahrtComponent},
   {path: 'jobs', component: PageJobsComponent},
