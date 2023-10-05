@@ -35,6 +35,9 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { PageDatenschutzComponent } from './page-datenschutz/page-datenschutz.component';
 import { PageTeamComponent } from './page-team/page-team.component';
 import { HttpClientModule } from "@angular/common/http";
+import { DoctorsComponent } from './doctors/doctors.component';
+import { PageEmployeeComponent } from './page-employee/page-employee.component';
+import { PageLocationComponent } from './page-location/page-location.component';
 
 
 @NgModule({
@@ -58,6 +61,9 @@ import { HttpClientModule } from "@angular/common/http";
     ImpressumComponent,
     PageDatenschutzComponent,
     PageTeamComponent,
+    DoctorsComponent,
+    PageEmployeeComponent,
+    PageLocationComponent,
     
 
   ],

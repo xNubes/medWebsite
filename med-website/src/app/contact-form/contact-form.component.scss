@@ -26,3 +26,10 @@ mat-form-field {
 mat-card-header {
     font-size: 2rem;
 }
+
+button {
+    padding: 2rem;
+    background: $primary-color;
+    color: white;
+    margin: 2rem 0 2rem 0;
+}

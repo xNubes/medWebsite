@@ -13,25 +13,36 @@
 
 .small-header {
     font-size: 1.8rem;
+    font-weight: 900;
 }
 
-button {
+.button {
     padding: 2rem;
     background: $primary-color;
     color: white;
     margin: 2rem 0 2rem 0;
+    font-weight: 700;
+    z-index: 0;
 }
 
+button:hover {
+background: $accent-color;
+}
 .flex-column {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+}
+
+mat-card-actions {
+    color: white;
 }
 
 .main-header {
     align-self: center;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .small-container {
@@ -40,9 +51,14 @@ button {
     align-items: center; /* align vertical */
     background: $primary-color;
     color: white;
-    margin: 0 2rem 0 2rem;
+    margin: 1rem;
+    padding: 0;
 }
 
 a {
     align-self: center;
+}
+
+.footer {
+    margin-top: 1rem;
 }

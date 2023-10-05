@@ -12,11 +12,13 @@ import { PageTermineComponent } from './page-termine/page-termine.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { PageDatenschutzComponent } from './page-datenschutz/page-datenschutz.component';
 import { PageTeamComponent } from './page-team/page-team.component';
-
+import { DoctorsComponent } from './doctors/doctors.component';
+import { PageEmployeeComponent } from './page-employee/page-employee.component';
+import { PageLocationComponent } from './page-location/page-location.component';
 
 const routes: Routes = [
   {path: '', component: PagePraxisComponent},
-  { path: 'zeiten', component: PageZeitenComponent },
+  {path: 'zeiten', component: PageZeitenComponent },
   {path: 'anfahrt', component: PageAnfahrtComponent},
   {path: 'jobs', component: PageJobsComponent},
   {path: 'leistungen', component: PageLeistungenComponent},
@@ -25,6 +27,10 @@ const routes: Routes = [
   {path: 'impressum', component: ImpressumComponent},
   {path: 'datenschutz', component: PageDatenschutzComponent},
   {path: 'team', component: PageTeamComponent},
+  {path: 'ärzte', component: DoctorsComponent},
+  {path: 'angestellte', component: PageEmployeeComponent},
+  {path: 'standort', component: PageLocationComponent},
+
 ];
 
 @NgModule({
