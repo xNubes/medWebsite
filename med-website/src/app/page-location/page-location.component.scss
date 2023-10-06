@@ -1,0 +1,17 @@
+@import 'src/colors.scss';
+
+.filler {
+    height: 7.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+mat-card {
+    margin-bottom: 2rem;
+}
