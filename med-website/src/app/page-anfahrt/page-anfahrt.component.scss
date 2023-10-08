@@ -1,5 +1,9 @@
 @import 'src/colors.scss';
 
+* {
+    background: $primary-color-light;
+}
+
 .filler {
     height: 5.5rem;
 }
@@ -18,6 +22,8 @@
 .small-filler {
     height: 4rem;
 }
+
+
 
 mat-card-header {
     margin-left: 5rem;

@@ -24,6 +24,7 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
 }
 
 h1 {
@@ -37,7 +38,6 @@ h1 {
 }
 
 mat-card-header {
-    color: #000;
     font-size: 2rem;
     font-style: normal;
     font-weight: 500;
@@ -47,7 +47,6 @@ mat-card-header {
 }
 
 mat-card-content {
-    color: #000;
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
@@ -131,7 +130,8 @@ mat-card-content {
     flex-direction: column;
     align-items: flex-start; 
 
-    background: $primary-color-light;
+    background: $primary-color;
+    color: white;
     width: 30.2rem;
     height: 30.2rem;
     margin-top: 4rem;
@@ -140,7 +140,6 @@ mat-card-content {
 
 img {
     border-radius: 1.25rem 1.25rem 0 0;
-    background: #DAE0EA;
     width: 30.2rem;
     height: 30.2rem;
     max-height: 50%;

@@ -1,5 +1,9 @@
 @import 'src/colors.scss';
 
+mat-card, div{
+    background: $primary-color-light;
+}
+
 .blocker {
     height: 5.5rem;
 }
@@ -61,28 +65,20 @@ mat-card-content {
 
 .rounded-box {
     max-width: 100%;
-    background-color: $primary-color-light;
     text-align: center;
+    color: white;
     height: 10rem;
     width: 25rem;
     margin: 1rem;
+    background-color: $primary-color;
 }
 
 .rounded-box button p {
     font-size: 1.5vw;
 }
 
-.rounded-box button {
-    height: 100%;
-    width: 100%;
-    border: none;
-    background-color: $primary-color-light;
-}
-
-
 .rounded-box:hover {
-    color: white;
-    background: $primary-color;
+    background: $accent-color;
     cursor: pointer;
 }
 

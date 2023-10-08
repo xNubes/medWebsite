@@ -1,5 +1,9 @@
 @import 'src/colors.scss';
 
+div {
+    background: $primary-color-light;
+}
+
 .filler {
     height: 5.5rem;
 }
@@ -41,6 +45,8 @@ h3 {
     text-align: center;
     width: 30rem;
     max-width: 40%;
+    background: $primary-color;
+    color: $primary-color-light;
 }
 
 mat-card-header {
