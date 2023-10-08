@@ -8,4 +8,12 @@ import { AlertModule } from '@coreui/angular';
 })
 export class WarningBoxComponent {
 
+  public warningMessage = 'WarningMessage';
+
+
+  // public changeMessage(): void {
+  //   this.warningMessage = this.warningMessage.get('/assets/warning-message/nachricht.txt').subscribe(data => {
+  //     console.log(data.text());
+  //   });
+  // }
 }
