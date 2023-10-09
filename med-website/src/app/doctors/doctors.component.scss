@@ -1,7 +1,26 @@
 @import 'src/colors.scss';
 
 .filler {
-    height: 5.5rem;
+    height: 7rem;
+}
+
+.back-icon {
+    color: $primary-color;
+}
+
+.back-link:hover {
+    cursor: pointer;
+}
+
+.outer-box {
+    display: flex;
+    justify-content: center;
+}
+
+.inner-box {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .container {
@@ -11,7 +30,7 @@
 
 }
 
-mat-card {
+.doctor-card {
     width: 15rem;
     margin: 1rem;
 }

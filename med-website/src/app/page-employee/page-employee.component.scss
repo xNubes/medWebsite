@@ -1,13 +1,32 @@
 @import 'src/colors.scss';
 
 .filler {
-    height: 5.5rem;
+    height: 7rem;
+}
+
+.back-icon {
+    color: $primary-color;
+}
+
+.back-link:hover {
+    cursor: pointer;
+}
+
+.outer-box {
+    display: flex;
+    justify-content: center;
+}
+
+.inner-box {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
 
 }
 
