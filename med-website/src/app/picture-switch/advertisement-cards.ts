@@ -7,7 +7,7 @@ export interface AdvertismentCard {
 export const ADVERTISEMENTCARDS:AdvertismentCard[] = [
     {
         imgUrl: '/assets/aussenansicht.png', 
-        header: 'Standort Schmalenbeck', 
+        header: 'In Schmalenbeck', 
         contentText: 'Wir arbeiten eng mit Ärzt:innen aus den Bereichen HNO, Orthopädie, Kinderheilkunde, Urologie, Dermatologie, Nervenheilkunde und Gynäkologie, sowie mit einer physiotherapeutischen Praxis und einer Apotheke zusammen.'
     },
     {

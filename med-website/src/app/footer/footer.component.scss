@@ -4,13 +4,13 @@
     width: 100%;
     background-color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
+    flex-wrap: wrap;
     border-radius: 0;
 }
 
 .inner-box {
-    width: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
