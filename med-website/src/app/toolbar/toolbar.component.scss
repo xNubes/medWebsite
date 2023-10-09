@@ -67,7 +67,7 @@ mat-toolbar a {
 }
 
 mat-icon {
-  color: white;
+  color: $primary-color-light;
 }
 ul {
     list-style: none;
@@ -80,17 +80,21 @@ ul {
   }
 
 li:hover {
-    background-color: #2865c8;
+    background-color: $accent-color;
     cursor: pointer;
 }
 
 .activeLink {
-  background-color: #2865c8;
+  background-color: $accent-color;
   cursor: pointer;
 }
 
 a:visited {
-  color: white;
+  color: $primary-color-light;
+}
+
+a:visited {
+  color: $primary-color-light;
 }
 
 .burger-menu {
