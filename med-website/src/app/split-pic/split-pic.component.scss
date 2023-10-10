@@ -2,7 +2,7 @@
 
 .div-blue {
     width: 100%;
-    height: 23rem;
+    height: 25rem;
     flex-shrink: 0; 
     background: $primary-color-light; 
     margin-top: 0; 
@@ -14,12 +14,11 @@
 }   
 
 .welcome-header {
-        margin-top: 2rem;
-        flex-shrink: 0; 
-        color: white;
+        color: $primary-color;
         text-align: center;
-        font-size: 3vw;
+        font-size: 2.75rem;
         font-style: normal;
+        margin: 0;
 
     }
     
@@ -95,15 +94,15 @@
             max-height: 70%;
         }
 
-        .welcome-header {
-            margin: 1rem 0 0 ;
-        }
-
         .welcome-text {
-            margin-top: .1rem;
+            margin-top: 1rem;
         }
 
         .div-blue {
-            height: 15rem;
+            height: 25rem;
+        }
+
+        .welcome-header {
+            font-size: 2rem;
         }
       }
