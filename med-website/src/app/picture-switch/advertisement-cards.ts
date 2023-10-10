@@ -8,7 +8,7 @@ export const ADVERTISEMENTCARDS:AdvertismentCard[] = [
     {
         imgUrl: '/assets/aussenansicht.png', 
         header: 'In Schmalenbeck', 
-        contentText: 'Wir arbeiten eng mit Ärzt:innen aus den Bereichen HNO, Orthopädie, Kinderheilkunde, Urologie, Dermatologie, Nervenheilkunde und Gynäkologie, sowie mit einer physiotherapeutischen Praxis und einer Apotheke zusammen.'
+        contentText: 'Hier arbeiten wir eng mit Ärzt:innen aus den Bereichen HNO, Orthopädie, Kinderheilkunde, Urologie, Dermatologie, Nervenheilkunde und Gynäkologie sowie mit einer physiotherapeutischen Praxis und einer Apotheke zusammen.'
     },
     {
         imgUrl: '/assets/dr_juenemann_c.jpg',

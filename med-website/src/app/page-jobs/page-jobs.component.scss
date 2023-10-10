@@ -47,6 +47,7 @@ h3 {
     max-width: 40%;
     background: $primary-color;
     color: $primary-color-light;
+    margin-bottom: 2rem;
 }
 
 mat-card-header {
@@ -61,8 +62,10 @@ mat-card:hover {
     cursor: pointer;
 }
 
-.container::after {
-    content: '';
-    width: 30rem;
-    max-width: 40%;
-}
+
+@media screen and (max-width: 900px) {
+
+    .job-card {
+        max-width: 90%;
+    }
+  }

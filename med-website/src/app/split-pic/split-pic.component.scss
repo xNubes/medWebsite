@@ -10,7 +10,7 @@
 
 .half-box {
     max-width: 50%;
-    height: 20rem;
+
 }   
 
 .welcome-header {
@@ -33,7 +33,7 @@
     }
     
 .welcome-picture {
-    border-radius: 0 0.25rem 0.25rem 0;
+    border-radius: 0.25rem 0 0 0.25rem;
     margin-top: 0.4rem;
     max-width: 100%;
     object-fit: cover;
@@ -66,11 +66,30 @@
         }
       }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 500px) {
 
 
         .welcome-text {
-            font-size: 2.5vw;
+            font-size: 2.7vw;
 
+        }
+        .welcome-picture {
+            max-height: 100%;
+            border-radius: 0.25rem 0.25rem 0 0;
+        }
+
+        .rounded-content-box {
+            flex-direction: column;
+            height: 17rem;
+
+        }
+
+
+        .half-box {
+            max-width: 100%;
+        }
+
+        .picture-box {
+            max-height: 50%;
         }
       }

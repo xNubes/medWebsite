@@ -38,3 +38,13 @@ mat-card-content {
 .bold {
     font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+    mat-card-header {
+        margin-left: 0rem;
+    }
+    
+    mat-card-content {
+        margin-left: 0rem;
+    }
+}
