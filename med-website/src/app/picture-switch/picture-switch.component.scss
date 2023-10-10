@@ -67,6 +67,11 @@ mat-card-content {
 
 }
 
+.image {
+    max-width: 100%;
+    object-fit: cover;
+}
+
 // .switch-a-box {
 //     display: flex;
 //     margin: auto;
