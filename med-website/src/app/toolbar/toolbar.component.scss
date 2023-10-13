@@ -38,7 +38,7 @@
 
 mat-toolbar {
     background: #00305F;
-    height: 5.5rem;
+    height: 4.8rem;
     max-width: 100%;
     position: sticky;
     position: fixed;
@@ -62,9 +62,9 @@ mat-toolbar a {
   text-align: center;
   justify-content: center;
   text-decoration: none;
-  margin-top: 3.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  padding-top: 3.5rem;
 }
 
 mat-icon {
@@ -87,6 +87,7 @@ li:hover {
 
 .activeLink {
   background-color: $accent-color;
+  
   cursor: pointer;
 }
 

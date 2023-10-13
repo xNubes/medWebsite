@@ -5,7 +5,7 @@ div {
 }
 
 .filler {
-    height: 5.5rem;
+    height: 4.8rem;
 }
 
 .small-filler {
@@ -36,9 +36,12 @@ div {
 h1 {
     text-align: center;
     text-transform: uppercase;
+    color: $primary-color;
 }
 h3 {
     text-align: center;
+    color: $primary-color;
+    margin-bottom: 4rem;
 
 }
 .job-card {

@@ -8,7 +8,7 @@ import { AlertModule } from '@coreui/angular';
 })
 export class WarningBoxComponent {
 
-  public warningMessage = 'WarningMessage';
+  public warningMessage = 'Aktuelles';
 
 
   // public changeMessage(): void {
