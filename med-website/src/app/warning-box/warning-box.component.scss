@@ -9,12 +9,11 @@
     max-width: 90%;
     margin: auto;
     border: 2px solid $warn-color;
-    
 }
 
 .outer-box{
     background: $primary-color-light;
-    height: 10rem;
+    height: 14rem;
 }
 
 .warning-message {
@@ -25,12 +24,14 @@
     justify-content: center;
     flex-shrink: 0; 
     max-width: 100%;
-    color: black;
+    color: $primary-color;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal; 
+    height: fit-content;
+    
 }
 
 .block {

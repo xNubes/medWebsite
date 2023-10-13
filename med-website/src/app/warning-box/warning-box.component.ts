@@ -8,7 +8,7 @@ import { AlertModule } from '@coreui/angular';
 })
 export class WarningBoxComponent {
 
-  public warningMessage = 'Aktuelles';
+  public warningMessage = 'Falls Sie uns telefonisch nicht erreichen können, kontaktieren Sie uns bitte gerne auch per Email. Für Rezeptwünsche steht auch unser Rezepttelefon zur Verfügung.';
 
 
   // public changeMessage(): void {
