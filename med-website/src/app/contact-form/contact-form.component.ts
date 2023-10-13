@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators} from '@angular/forms';
-import { EmailService } from '../email.service';
-
 
 @Component({
   selector: 'app-contact-form',
@@ -75,16 +73,5 @@ getErrorMessageMessage() {
     console.log('resolved captcha with response:' +this.captcha);
   }
 
-  
-  // onSubmit() {
-  //   this.emailService.sendEmail(this.name, this.email, this.subject, this.message, this.captcha).subscribe(
-  //     response => {
-  //       console.log('Email sent successfully!');
-  //     },
-  //     error => {
-  //       console.log('Error sending email:', error);
-  //     }
-  //   );
-  // }
 }
 
