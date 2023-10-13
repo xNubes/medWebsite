@@ -27,9 +27,9 @@ const routes: Routes = [
   {path: 'impressum', component: ImpressumComponent},
   {path: 'datenschutz', component: PageDatenschutzComponent},
   {path: 'team', component: PageTeamComponent},
-  {path: 'ärzte', component: DoctorsComponent},
-  {path: 'angestellte', component: PageEmployeeComponent},
-  {path: 'standort', component: PageLocationComponent},
+  {path: 'team/aerzte', component: DoctorsComponent},
+  {path: 'team/angestellte', component: PageEmployeeComponent},
+  {path: 'team/standort', component: PageLocationComponent},
 
 ];
 
