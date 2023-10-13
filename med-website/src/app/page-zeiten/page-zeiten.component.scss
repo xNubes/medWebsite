@@ -70,6 +70,7 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    max-width: 90%;
 }
 
 .description {
@@ -91,9 +92,8 @@ h2 {
 }
 
 .day {
-    width: 5rem;
+    width: 8rem;
     font-weight: 900;
-    margin-right: 2rem;
 }
 p {
     color: $primary-color;
