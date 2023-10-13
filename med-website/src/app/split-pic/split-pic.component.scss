@@ -31,6 +31,7 @@
         font-style: normal;
         font-weight: 400;
         font-style: normal;
+        margin-top: 0;
         
     }
     
@@ -78,6 +79,11 @@
         }
 
         .welcome-header {
-            font-size: 2.5;
+            font-size: 10vw;
+        }
+
+        .welcome-text {
+            font-size: 4vw;
+
         }
     }
