@@ -32,9 +32,13 @@ mat-card {
     background: $primary-color;
     color: white;
     margin: 1rem .5rem 1rem .5rem;
+    max-width: 95%;
 
   }
   
+  img {
+    max-width: 100%;
+  }
 
   mat-card-content {
     margin-top: 1rem;
