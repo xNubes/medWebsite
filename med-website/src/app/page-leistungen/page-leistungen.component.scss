@@ -88,6 +88,18 @@ mat-card-content {
     height: 12rem;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: $primary-color-light;
+  }
+  
+a:link {
+    color: $primary-color-light;
+  }
+
 @media screen and (min-width: 1200px){
     .rounded-box button p {
         font-size: 1rem;

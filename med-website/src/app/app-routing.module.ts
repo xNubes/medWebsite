@@ -15,6 +15,10 @@ import { PageTeamComponent } from './page-team/page-team.component';
 import { DoctorsComponent } from './doctors/doctors.component';
 import { PageEmployeeComponent } from './page-employee/page-employee.component';
 import { PageLocationComponent } from './page-location/page-location.component';
+import { PageVorsorgeComponent } from './page-vorsorge/page-vorsorge.component';
+import { PageDiagnoseComponent } from './page-diagnose/page-diagnose.component';
+import { PageBehandlungComponent } from './page-behandlung/page-behandlung.component';
+import { PageImpfberatungComponent } from './page-impfberatung/page-impfberatung.component';
 
 const routes: Routes = [
   {path: '', component: PagePraxisComponent},
@@ -30,7 +34,10 @@ const routes: Routes = [
   {path: 'team/aerzte', component: DoctorsComponent},
   {path: 'team/angestellte', component: PageEmployeeComponent},
   {path: 'team/standort', component: PageLocationComponent},
-
+  {path: 'leistungen/vorsorge', component: PageVorsorgeComponent},
+  {path: 'leistungen/diagnose', component: PageDiagnoseComponent},
+  {path: 'leistungen/behandlung', component: PageBehandlungComponent},
+  {path: 'leistungen/impfberatung', component: PageImpfberatungComponent},
 ];
 
 @NgModule({

@@ -39,6 +39,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { DoctorsComponent } from './doctors/doctors.component';
 import { PageEmployeeComponent } from './page-employee/page-employee.component';
 import { PageLocationComponent } from './page-location/page-location.component';
+import { PageVorsorgeComponent } from './page-vorsorge/page-vorsorge.component';
+import { PageDiagnoseComponent } from './page-diagnose/page-diagnose.component';
+import { PageBehandlungComponent } from './page-behandlung/page-behandlung.component';
+import { PageImpfberatungComponent } from './page-impfberatung/page-impfberatung.component';
 
 
 @NgModule({
@@ -65,6 +69,10 @@ import { PageLocationComponent } from './page-location/page-location.component';
     DoctorsComponent,
     PageEmployeeComponent,
     PageLocationComponent,
+    PageVorsorgeComponent,
+    PageDiagnoseComponent,
+    PageBehandlungComponent,
+    PageImpfberatungComponent,
     
 
   ],
