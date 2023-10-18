@@ -26,6 +26,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 100%;
+    padding-right: 0;
 }
 
 .small-header {
@@ -38,6 +40,7 @@
 .footer {
     background: $primary-color;
     margin-top: 1rem;
+    
 }
 
 .button {
@@ -78,7 +81,7 @@ mat-card-actions {
     align-items: center; /* align vertical */
     background: $primary-color;
     color: white;
-    // margin: 2rem;
+    
 }
 
 a {
@@ -94,6 +97,7 @@ a {
 img {
     margin: 0;
 }
+
 
 @media screen and (max-width: 800px) {
     
