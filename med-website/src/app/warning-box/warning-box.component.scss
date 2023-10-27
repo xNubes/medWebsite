@@ -2,24 +2,24 @@
 
 .warning-box {
     display: flex;
-    width: 80.875rem;
     justify-content: center;
     align-items: center; 
     background: $warn-color-light; 
     max-width: 90%;
     margin: auto;
     border: 2px solid $warn-color;
+
 }
 
 .outer-box{
+    display: block;
     background: $primary-color-light;
-    height: 14rem;
+    padding-bottom: 2rem;
+    margin-top: 0;
 }
 
 .warning-message {
     display: flex;
-    width: 60rem;
-    height: 4rem;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0; 
@@ -32,10 +32,6 @@
     line-height: normal; 
     height: fit-content;
 
-}
-
-.block {
-    height: 2rem;
 }
 
 @media only screen and (max-width: 600px) {

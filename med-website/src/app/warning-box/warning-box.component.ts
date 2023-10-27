@@ -8,12 +8,24 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WarningBoxComponent {
 
-  public warningMessage = '';
+  public warningMessage = null;
   constructor(private http: HttpClient) {
 
+  }
+  displayBox () {
+    var outerBox = document.getElementById("outer-box");
+
+    if (this.warningMessage = null) {
+      
+      outerBox.style.display = "none";
+    }
+    else {
+      outerBox.style.display = "block";
+    }
   }
 
   ngOnInit() {
     this.http.get("\assets\warning-message\Nachricht.txt", {responseType: 'text'}).subscribe((warningMessage:string) => this.warningMessage = warningMessage)
+
   }
 }

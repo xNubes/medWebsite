@@ -2,10 +2,11 @@
 
 .div-blue {
     width: 100%;
-    height: 30rem;
+    height: 20rem;
     flex-shrink: 0; 
     background: $primary-color-light; 
     margin-top: 0; 
+    margin-bottom: 7rem;
     }
 
 .half-box {
@@ -14,14 +15,7 @@
 
 }   
 
-.welcome-header {
-        color: $primary-color;
-        text-align: center;
-        font-size: 2.75rem;
-        font-style: normal;
-        margin: 0 0 3rem 0;
 
-    }
     
 .welcome-text {
         flex-shrink: 0;  
@@ -57,25 +51,25 @@
     
 
 
-    @media screen and (min-width: 979px) {
-        .welcome-header {
-            font-size: 2.5rem;
+    // @media screen and (min-width: 97px) {
+    //     .welcome-header {
+    //         font-size: 2.5rem;
 
-        }
+    //     }
 
-        .welcome-text {
-            font-size: 1.5rem;
+    //     .welcome-text {
+    //         font-size: 1.5rem;
 
-        }
+    //     }
 
-        .div-blue {
-            height: 25rem;
-        }
-      }
+    //     .div-blue {
+    //         height: 25rem;
+    //     }
+    //   }
 
     @media screen and (max-width: 520px) {
         .div-blue {
-            height: 35rem;
+            height: 20rem;
         }
 
         .welcome-header {
