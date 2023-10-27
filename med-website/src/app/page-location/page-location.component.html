@@ -8,9 +8,18 @@
 </div>
 <div class="outer-container">
     <div class="container">
-        <mat-card>
-            <img mat-card-image src="\assets\rooms\sprechzimmer_01.jpg" height="267" width="400">
-        </mat-card>
+        <!-- <mat-card>
+            <button (click)="enlargeImage("modal01")">
+                <img mat-card-image id="testImage" src="\assets\rooms\sprechzimmer_01.jpg" height="267" width="400">
+            </button>
+        </mat-card> -->
+        <div id="modal01" class="modal">
+            <!-- <button (click)="exitImage("modal01")">
+                <mat-icon class="close" >close</mat-icon>
+            </button> -->
+            <img mat-card-image class="modal-content" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
+            <div id="caption01"></div>
+        </div>
         <mat-card>
             <img mat-card-image src="\assets\rooms\sprechzimmer_02.jpg" height="267" width="400">
         </mat-card>
