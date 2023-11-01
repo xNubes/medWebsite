@@ -8,48 +8,99 @@
 </div>
 <div class="outer-container">
     <div class="container">
-        <!-- <mat-card>
-            <button (click)="enlargeImage("modal01")">
+        <mat-card (click)="enlargeImage('modal01')">
                 <img mat-card-image id="testImage" src="\assets\rooms\sprechzimmer_01.jpg" height="267" width="400">
-            </button>
-        </mat-card> -->
+        </mat-card>
         <div id="modal01" class="modal">
-            <!-- <button (click)="exitImage("modal01")">
+            <button (click)="exitImage('modal01')">
                 <mat-icon class="close" >close</mat-icon>
-            </button> -->
+            </button>
             <img mat-card-image class="modal-content" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
-            <div id="caption01"></div>
         </div>
-        <mat-card>
-            <img mat-card-image src="\assets\rooms\sprechzimmer_02.jpg" height="267" width="400">
+
+        <mat-card (click)="enlargeImage('modal02')">
+            <img mat-card-image id="testImage" src="\assets\rooms\sprechzimmer_02.jpg" height="267" width="400">
         </mat-card>
-        <mat-card>
-            <img mat-card-image src="\assets\rooms\sprechzimmer_03.jpg" height="267" width="400">
+        <div id="modal02" class="modal">
+            <button (click)="exitImage('modal02')">
+                <mat-icon class="close" >close</mat-icon>
+            </button>
+            <img mat-card-image class="modal-content-two" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
+        </div>
+
+
+        <mat-card (click)="enlargeImage('modal03')">
+            <img mat-card-image id="testImage" src="\assets\rooms\sprechzimmer_03.jpg" height="267" width="400">
         </mat-card>
-     
-        <mat-card>
-            <img mat-card-image src="\assets\rooms\wartezimmer_neu_03.jpg" height="267" width="400">
+        <div id="modal03" class="modal">
+            <button (click)="exitImage('modal03')">
+                <mat-icon class="close" >close</mat-icon>
+            </button>
+            <img mat-card-image class="modal-content" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
+        </div>
+        <mat-card (click)="enlargeImage('modal04')">
+            <img mat-card-image id="testImage" src="\assets\rooms\wartezimmer_neu_03.jpg" height="267" width="400">
         </mat-card>
-        <mat-card>
-            <img mat-card-image src="\assets\rooms\Wartezimmer_02.jpg" height="267" width="400">
+        <div id="modal04" class="modal">
+            <button (click)="exitImage('modal04')">
+                <mat-icon class="close" >close</mat-icon>
+            </button>
+            <img mat-card-image class="modal-content" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
+        </div>
+        <mat-card (click)="enlargeImage('modal05')">
+            <img mat-card-image id="testImage" src="\assets\rooms\Wartezimmer_02.jpg" height="267" width="400">
         </mat-card>
-    
-        <mat-card>
-            <img mat-card-image src="\assets\rooms\Empfang_02.jpg" height="267" width="400">
+        <div id="modal05" class="modal">
+            <button (click)="exitImage('modal05')">
+                <mat-icon class="close" >close</mat-icon>
+            </button>
+            <img mat-card-image class="modal-content" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
+        </div>
+        <mat-card (click)="enlargeImage('modal06')">
+            <img mat-card-image id="testImage" src="\assets\rooms\Empfang_02.jpg" height="267" width="400">
         </mat-card>
-    
-        <mat-card>
-            <img mat-card-image src="\assets\rooms\ultraschall.jpg" height="267" width="400">
+        <div id="modal06" class="modal">
+            <button (click)="exitImage('modal06')">
+                <mat-icon class="close" >close</mat-icon>
+            </button>
+            <img mat-card-image class="modal-content" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
+        </div>
+        <mat-card (click)="enlargeImage('modal07')">
+            <img mat-card-image id="testImage" src="\assets\rooms\ultraschall.jpg" height="267" width="400">
         </mat-card>
-        <mat-card>
-            <img mat-card-image src="\assets\rooms\EKG.jpg" height="267" width="400">
+        <div id="modal07" class="modal">
+            <button (click)="exitImage('modal07')">
+                <mat-icon class="close" >close</mat-icon>
+            </button>
+            <img mat-card-image class="modal-content" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
+        </div>
+        <mat-card (click)="enlargeImage('modal08')">
+            <img mat-card-image id="testImage" src="\assets\rooms\EKG.jpg" height="267" width="400">
         </mat-card>
-        <mat-card>
-            <img mat-card-image src="\assets\rooms\labor.jpg" height="267" width="400">
+        <div id="modal08" class="modal">
+            <button (click)="exitImage('modal08')">
+                <mat-icon class="close" >close</mat-icon>
+            </button>
+            <img mat-card-image class="modal-content" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
+        </div>
+        <mat-card (click)="enlargeImage('modal09')">
+            <img mat-card-image id="testImage" src="\assets\rooms\labor.jpg" height="267" width="400">
         </mat-card>
-        <mat-card>
-            <img mat-card-image src="\assets\rooms\behandlung.jpg" height="267" width="400">
+        <div id="modal09" class="modal">
+            <button (click)="exitImage('modal09')">
+                <mat-icon class="close" >close</mat-icon>
+            </button>
+            <img mat-card-image class="modal-content" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
+        </div>
+        <mat-card (click)="enlargeImage('modal10')">
+            <img mat-card-image id="testImage"   src="\assets\rooms\behandlung.jpg" height="267" width="400">
         </mat-card>
+        <div id="modal10" class="modal">
+            <button (click)="exitImage('modal10')">
+                <mat-icon class="close" >close</mat-icon>
+            </button>
+            <img mat-card-image class="modal-content" id="img01" src="\assets\rooms\sprechzimmer_01.jpg">
+        </div>
     </div>
 </div>
 <div class="outer-box">

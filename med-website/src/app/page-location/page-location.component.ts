@@ -7,14 +7,10 @@ import { Component } from '@angular/core';
 })
 export class PageLocationComponent {
   
-  enlargeImage(myModal, myImg, myCaption){
+  enlargeImage(myModal){
     var modal = document.getElementById(myModal);
-    var modalImg = document.getElementById(myImg);
-    var captionText = document.getElementById(myCaption);
-  
+    console.log (modal);
     modal.style.display = "block";
-    // modalImg.src = this.src;
-    // captionText.innerHTML = this.alt;
   }
   
   exitImage(myModal) {

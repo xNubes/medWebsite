@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-form',
@@ -7,13 +8,34 @@ import { FormBuilder, FormControl, Validators} from '@angular/forms';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent  {
+  
   email = new FormControl('', [Validators.required, Validators.email]);
   name = new FormControl('', [Validators.required]);
   subject = new FormControl('', [Validators.required]);
   message = new FormControl('', [Validators.required]);
   captcha: string;
+  
+  title = 'EmailTemplate';
+  dataset: Details = {
+    name:'',
+    message:'',
+    subject:'',
+    email:''
+  };
 
-
+  // onSubmit(){
+  //   this.https.post<Details>('http://localhost:8080/testapp/getdetails', this.dataset).subscribe(
+  //       res => {
+  //         this.dataset = res;
+  //         console.log(this.dataset);
+  //         alert('Email Sent successfully');
+  //         this.dataset.email = '';
+  //         this.dataset.name = '';
+  //         this.dataset.subject = '';
+  //         this.dataset.message = '';
+  //       });
+  // }
+  
   getErrorMessageName() {
     if (this.name.hasError('required')) {
       return 'Sie müssen einen Namen eingeben';
@@ -63,10 +85,6 @@ getErrorMessageMessage() {
   return this.message.hasError('text') ? 'Keine gültige Nachricht ' : '';
 }
 
-  constructor() {
-    this.captcha ='';
-
-  }
 
   resolved(captchaResponse: string) {
     this.captcha = captchaResponse;
@@ -74,4 +92,13 @@ getErrorMessageMessage() {
   }
 
 }
+interface Details{
+  name:string;
+  subject:string;
+  message:string;
+  email:string;
+}
+
+
+
 

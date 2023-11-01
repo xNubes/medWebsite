@@ -13,15 +13,15 @@ export class EmailService {
 
   constructor(private http: HttpClient) { }
 
-  sendEmail(name: string, reciever: string, email: string, subject: string, message: string) {
-    const data = {
+  sendEmail(name: string, email: string, subject: string, message: string) {
+    const emailData = {
       name: name,
       reciever: "robin@juenemanns.de",
       email: email,
       subject: subject,
       message: message
     };
-    return this.http.post(this.emailUrl, data);
+    return this.http.post(this.emailUrl, emailData);
   }
 
 }
