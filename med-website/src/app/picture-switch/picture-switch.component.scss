@@ -37,7 +37,7 @@ h1 {
     flex-shrink: 0; 
     color: $primary-color;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal; 
@@ -155,12 +155,16 @@ mat-card-content {
     }
   }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
 
 
     .welcome-text {
         font-size: 2.5vw;
 
+    }
+
+    h1 {
+        font-size: 6vw;
     }
     
   }

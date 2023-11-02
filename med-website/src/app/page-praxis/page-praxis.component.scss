@@ -15,19 +15,11 @@ div {
 
 }
 
-@media screen and (min-width: 979px) {
-    .welcome-header {
-        font-size: 2.5rem;
-
-    }
-
-  }
-
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 600px) {
 
 
     .welcome-header {
-        font-size: 10vw;
+        font-size: 8vw;
     }
 
 }
