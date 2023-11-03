@@ -6,10 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-location.component.scss']
 })
 export class PageLocationComponent {
+  isImageEnlarged: { [key: string]: boolean } = {};
+  constructor() {
+    this.initializeImageState('image1');
+    this.initializeImageState('image2');
+    this.initializeImageState('image3');
+  }
   
+  initializeImageState(imageName: string) {
+    this.isImageEnlarged[imageName] = false;
+  }
+
+  toggleImage (imageName: string) {
+    this.isImageEnlarged[imageName] = !this.isImageEnlarged[imageName];
+
+  }
+
   enlargeImage(myModal){
     var modal = document.getElementById(myModal);
-    console.log (modal);
     modal.style.display = "block";
   }
   
