@@ -45,7 +45,7 @@ export class ContactFormComponent  {
     //       this.dataset.subject = '';
     //       this.dataset.message = '';
     //     });
-    window.location.reload();
+        window.location.reload();
   }
   
   getErrorMessageName() {
