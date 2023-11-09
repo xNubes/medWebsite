@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, Validators} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { EmailService } from '../email.service';
 
@@ -8,22 +8,32 @@ import { EmailService } from '../email.service';
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss'],
 })
+
+
 export class ContactFormComponent  {
   tempKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
   siteKey = "6Leuj1koAAAAALkrG14WznMjvzECBqY1P4gTxAFA";
 
+  allSet = false;
   nameSet = false;
   emailSet = false;
   subjectSet = false;
   messageSet = false;
-  captchaSet = false;
-  allSet = false;
-
-  email = new FormControl('', [Validators.required, Validators.email]);
-  name = new FormControl('', [Validators.required]);
-  subject = new FormControl('', [Validators.required]);
-  message = new FormControl('', [Validators.required]);
   captcha: string;
+
+  readonly form: FormGroup;
+  public constructor() {
+    this.form = new FormGroup (
+      {
+        nameControl: new FormControl('', [Validators.required]),
+        emailControl: new FormControl('', [Validators.required, Validators.email]),
+        subjectControl: new FormControl('', [Validators.required]),
+        messageControl: new FormControl('', [Validators.required])
+      }
+    );
+  }
+
+
   
   title = 'EmailTemplate';
   dataset: Details = {
@@ -45,50 +55,22 @@ export class ContactFormComponent  {
     //       this.dataset.subject = '';
     //       this.dataset.message = '';
     //     });
+      this.updateValueAndValidity();
+      if (this.form.invalid) {
+        this.form.markAllAsTouched();
+      }
+      else {
         window.location.reload();
-  }
-  
-  getErrorMessageName() {
-    if (this.name.hasError('required')) {
-      return 'Sie müssen einen Namen eingeben';
-    }
-    else if (this.email.hasError('email')) {
-      return 'Keine gültige E-Mail ';
-    }
+      }
 
-    return this.nameSet = true;
   }
 
-  getErrorMessageEmail() {
-
-
-    if (this.email.hasError('required')) {
-      return 'Sie müssen eine E-Mail eingeben';
+  updateValueAndValidity() {
+    for (let controlName in this.form.controls) {
+      this.form.controls[controlName].updateValueAndValidity;
     }
-    else if (this.email.hasError('email')) {
-      return 'Keine gültige E-Mail';
-    }
-    return this.emailSet = true;
   }
 
-  getErrorMessageSubject() {
-
-    if (this.subject.hasError('required')) {
-      return 'Sie müssen einen Betreff eingeben';
-    }
-
-    return this.subjectSet = true;
-}
-
-getErrorMessageMessage() {
-
-
-  if (this.message.hasError('required')) {
-    return 'Sie müssen eine Nachricht eingeben';
-  }
-
-  return this.messageSet = true;
-}
 
 
 resolved(captchaResponse: string) {
@@ -97,21 +79,6 @@ resolved(captchaResponse: string) {
   console.log('resolved captcha with response:' +this.captcha);
 
 }
-
-// sendCheck () {
-
-//   if (this.captchaSet) {
-//     if (this.nameSet) {
-//       if (this.emailSet) {
-//         if (this.subjectSet) {
-//           if (this.messageSet) {
-//             this.allSet = true;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 
 }
 interface Details{

@@ -18,8 +18,13 @@ mat-card {
     margin: 2rem 0 5rem  0;
 }
 
+.form {
+    align-content: center;
+}
+
 mat-form-field {
-    max-width: 70%;
+    align-self: center;
+    max-width:90%;
     width: 50rem;
 }
 
