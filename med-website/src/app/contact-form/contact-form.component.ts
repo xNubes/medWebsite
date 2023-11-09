@@ -12,7 +12,13 @@ export class ContactFormComponent  {
   tempKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
   siteKey = "6Leuj1koAAAAALkrG14WznMjvzECBqY1P4gTxAFA";
 
-  
+  nameSet = false;
+  emailSet = false;
+  subjectSet = false;
+  messageSet = false;
+  captchaSet = false;
+  allSet = false;
+
   email = new FormControl('', [Validators.required, Validators.email]);
   name = new FormControl('', [Validators.required]);
   subject = new FormControl('', [Validators.required]);
@@ -28,25 +34,29 @@ export class ContactFormComponent  {
   };
 
 
-  // onSubmit(){
-  //   this.http.post<Details>('http://localhost:8080/testapp/getdetails', this.dataset).subscribe(
-  //       res => {
-  //         this.dataset = res;
-  //         console.log(this.dataset);
-  //         alert('Email Sent successfully');
-  //         this.dataset.email = '';
-  //         this.dataset.name = '';
-  //         this.dataset.subject = '';
-  //         this.dataset.message = '';
-  //       });
-  // }
+  onSubmit(){
+    // this.http.post<Details>('http://localhost:8080/testapp/getdetails', this.dataset).subscribe(
+    //     res => {
+    //       this.dataset = res;
+    //       console.log(this.dataset);
+    //       alert('Email Sent successfully');
+    //       this.dataset.email = '';
+    //       this.dataset.name = '';
+    //       this.dataset.subject = '';
+    //       this.dataset.message = '';
+    //     });
+    window.location.reload();
+  }
   
   getErrorMessageName() {
     if (this.name.hasError('required')) {
       return 'Sie müssen einen Namen eingeben';
     }
+    else if (this.email.hasError('email')) {
+      return 'Keine gültige E-Mail ';
+    }
 
-    return this.email.hasError('email') ? 'Keine gültige E-Mail ' : '';
+    return this.nameSet = true;
   }
 
   getErrorMessageEmail() {
@@ -55,8 +65,10 @@ export class ContactFormComponent  {
     if (this.email.hasError('required')) {
       return 'Sie müssen eine E-Mail eingeben';
     }
-
-    return this.email.hasError('email') ? 'Keine gültige E-Mail ' : '';
+    else if (this.email.hasError('email')) {
+      return 'Keine gültige E-Mail';
+    }
+    return this.emailSet = true;
   }
 
   getErrorMessageSubject() {
@@ -65,7 +77,7 @@ export class ContactFormComponent  {
       return 'Sie müssen einen Betreff eingeben';
     }
 
-    return this.subject.hasError('subject') ? 'Kein gültiger Betreff ' : '';
+    return this.subjectSet = true;
 }
 
 getErrorMessageMessage() {
@@ -75,14 +87,31 @@ getErrorMessageMessage() {
     return 'Sie müssen eine Nachricht eingeben';
   }
 
-  return this.message.hasError('text') ? 'Keine gültige Nachricht ' : '';
+  return this.messageSet = true;
 }
 
 
-  resolved(captchaResponse: string) {
-    this.captcha = captchaResponse;
-    console.log('resolved captcha with response:' +this.captcha);
-  }
+resolved(captchaResponse: string) {
+  this.captcha = captchaResponse;
+  this.allSet = true;
+  console.log('resolved captcha with response:' +this.captcha);
+
+}
+
+// sendCheck () {
+
+//   if (this.captchaSet) {
+//     if (this.nameSet) {
+//       if (this.emailSet) {
+//         if (this.subjectSet) {
+//           if (this.messageSet) {
+//             this.allSet = true;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 }
 interface Details{

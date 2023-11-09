@@ -29,9 +29,9 @@
       <mat-error *ngIf="message.invalid">{{getErrorMessageMessage()}}</mat-error>
     </mat-form-field>
     
-    <re-captcha (resolved)="resolved($event)" siteKey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></re-captcha>
-    <mat-card-actions>
-      <!-- <button mat-button class="button" (click)="onSubmit()">Abschicken</button> -->
+    <re-captcha (resolved)="resolved($event)" siteKey={{tempKey}}></re-captcha>
+    <mat-card-actions *ngIf="allSet">
+      <button mat-button class="button" (click)="onSubmit()">Abschicken</button>
     </mat-card-actions>  
     <div class="filler"></div>
   </mat-card>
