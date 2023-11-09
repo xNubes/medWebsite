@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { EmailService } from '../email.service';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss']
+  styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent  {
+  tempKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+  siteKey = "6Leuj1koAAAAALkrG14WznMjvzECBqY1P4gTxAFA";
+
   
   email = new FormControl('', [Validators.required, Validators.email]);
   name = new FormControl('', [Validators.required]);
@@ -23,8 +27,9 @@ export class ContactFormComponent  {
     email:''
   };
 
+
   // onSubmit(){
-  //   this.https.post<Details>('http://localhost:8080/testapp/getdetails', this.dataset).subscribe(
+  //   this.http.post<Details>('http://localhost:8080/testapp/getdetails', this.dataset).subscribe(
   //       res => {
   //         this.dataset = res;
   //         console.log(this.dataset);
@@ -39,18 +44,6 @@ export class ContactFormComponent  {
   getErrorMessageName() {
     if (this.name.hasError('required')) {
       return 'Sie müssen einen Namen eingeben';
-    }
-
-    if (this.email.hasError('required')) {
-      return 'Sie müssen eine E-Mail eingeben';
-    }
-
-    if (this.subject.hasError('required')) {
-      return 'Sie müssen einen Betreff eingeben';
-    }
-
-    if (this.message.hasError('required')) {
-      return 'Sie müssen eine Nachricht eingeben';
     }
 
     return this.email.hasError('email') ? 'Keine gültige E-Mail ' : '';
@@ -98,7 +91,3 @@ interface Details{
   message:string;
   email:string;
 }
-
-
-
-
