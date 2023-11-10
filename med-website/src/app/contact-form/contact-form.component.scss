@@ -1,35 +1,8 @@
 @import 'src/colors.scss';
 
-.outer-box {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    
-}
-.filler {
-    height: 3rem;
-}
-
-mat-card {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    margin: 2rem 0 5rem  0;
-}
-
-.form {
-    align-content: center;
-}
-
-mat-form-field {
-    align-self: center;
-    max-width:90%;
+.field {
     width: 50rem;
-}
-
-mat-card-header {
-    font-size: 2rem;
+    max-width: 90%;
 }
 
 .button {
@@ -37,4 +10,29 @@ mat-card-header {
     background: $primary-color;
     color: white;
     margin: 2rem 0 2rem 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.filler {
+    height: 3rem;
+}
+
+// .outer-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+// }
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

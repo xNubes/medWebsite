@@ -1,43 +1,37 @@
-
-<div class="outer-box">
-  <mat-card>
-
-    <div class="filler"></div>
-    <mat-card-header>Kontaktfomular</mat-card-header>
-    <div class="filler"></div>
-    
-    <form class="form" [formGroup]="form">
-
-    <mat-form-field>
+<form class="form" [formGroup]="form">
+    <mat-form-field class="field">
       <mat-label>Name:</mat-label>
       <input matInput placeholder="Max Mustermann" id="name" type="text" [(ngModel)]="dataset.name" name="name"  formControlName="nameControl">
       <mat-error *ngIf="form.invalid">Bitte geben sie einen Namen ein.</mat-error>
     </mat-form-field>
     
-    <mat-form-field>
+    <mat-form-field class="field">
       <mat-label>E-Mail:</mat-label>
       <input matInput placeholder="max@mustermann.de" id="email" type="email" [(ngModel)]="dataset.email" name="email"  formControlName="emailControl">
       <mat-error *ngIf="form.invalid">Bitte geben sie eine E-Mail ein.</mat-error>
     </mat-form-field>
     
-    <mat-form-field>
+    <mat-form-field class="field">
       <mat-label>Betreff:</mat-label>
       <input matInput id="subject" type="text" [(ngModel)]="dataset.subject" name="subject" formControlName="subjectControl" >
       <mat-error *ngIf="form.invalid">Bitte geben sie einen Betreff ein.</mat-error>
     </mat-form-field>
   
-    <mat-form-field>
+    <mat-form-field class="field">
       <mat-label>Nachricht:</mat-label>
       <textarea matInput id="message" type="text" [(ngModel)]="dataset.message" name="message" formControlName="messageControl" ></textarea>
       <mat-error *ngIf="form.invalid">Bitte geben sie eine Nachricht ein.</mat-error>
     </mat-form-field>
-    
-    <re-captcha (resolved)="resolved($event)" siteKey={{tempKey}}></re-captcha>
-    <mat-card-actions *ngIf="allSet">
-      <button mat-button class="button" (click)="onSubmit()">Abschicken</button>
-    </mat-card-actions>  
-    <div class="filler"></div>
-  </form>
-  </mat-card>
-</div>
 
+  
+</form>
+<div class="container">
+  <div class="filler"></div>
+  <re-captcha (resolved)="resolved($event)" siteKey={{tempKey}}></re-captcha>
+  <mat-card-actions *ngIf="allSet">
+  <button mat-button class="button" (click)="onSubmit()">Abschicken</button>
+  </mat-card-actions>  
+<div class="filler" *ngIf="!allSet"></div>
+<div class="filler" *ngIf="!allSet"></div>
+<div class="filler" *ngIf="!allSet"></div>
+</div>

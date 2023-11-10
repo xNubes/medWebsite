@@ -25,7 +25,32 @@ h2 {
     color: $primary-color;
 }
 
+.outer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+.filler {
+    height: 3rem;
+}
 
+.formCard {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 2rem 0 5rem  0;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+}
+mat-card-header {
+    font-size: 2rem;
+}
 
 .container, h3 {
     display: flex;
