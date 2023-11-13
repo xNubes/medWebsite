@@ -22,7 +22,8 @@ export class ContactFormComponent  {
   captcha: string;
 
   readonly form: FormGroup;
-  public constructor() {
+  
+  public constructor(private http: HttpClient) {
     this.form = new FormGroup (
       {
         nameControl: new FormControl('', [Validators.required]),
@@ -40,21 +41,23 @@ export class ContactFormComponent  {
     name:'',
     message:'',
     subject:'',
-    email:''
+    email:'',
+    reciever:''
   };
 
 
   onSubmit(){
-    // this.http.post<Details>('http://localhost:8080/testapp/getdetails', this.dataset).subscribe(
-    //     res => {
-    //       this.dataset = res;
-    //       console.log(this.dataset);
-    //       alert('Email Sent successfully');
-    //       this.dataset.email = '';
-    //       this.dataset.name = '';
-    //       this.dataset.subject = '';
-    //       this.dataset.message = '';
-    //     });
+    this.http.post<Details>('http://localhost:8080/testapp/getdetails', this.dataset).subscribe(
+        res => {
+          this.dataset = res;
+          console.log(this.dataset);
+          alert('Email Sent successfully');
+          this.dataset.email = '';
+          this.dataset.name = '';
+          this.dataset.subject = '';
+          this.dataset.message = '';
+          this.dataset.reciever = '';
+        });
       this.updateValueAndValidity();
       if (this.form.invalid) {
         this.form.markAllAsTouched();
@@ -86,4 +89,5 @@ interface Details{
   subject:string;
   message:string;
   email:string;
+  reciever:string;
 }
