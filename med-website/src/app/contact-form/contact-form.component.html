@@ -21,10 +21,9 @@
       <mat-label>Nachricht:</mat-label>
       <textarea matInput id="message" type="text" [(ngModel)]="dataset.message" name="message" formControlName="messageControl" ></textarea>
       <mat-error *ngIf="form.invalid">Bitte geben sie eine Nachricht ein.</mat-error>
-    </mat-form-field>
-
-  
+    </mat-form-field>  
 </form>
+
 <div class="container">
   <div class="filler"></div>
   <re-captcha (resolved)="resolved($event)" siteKey={{tempKey}}></re-captcha>
