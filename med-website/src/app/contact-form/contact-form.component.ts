@@ -41,7 +41,7 @@ export class ContactFormComponent  {
     message:'',
     subject:'',
     email:'',
-    reciever:''
+    receiver:'troumble@gmail.com'
   };
 
 
@@ -55,14 +55,11 @@ export class ContactFormComponent  {
           this.dataset.name = '';
           this.dataset.subject = '';
           this.dataset.message = '';
-          this.dataset.reciever = '';
+          this.dataset.receiver = '';
         });
       this.updateValueAndValidity();
       if (this.form.invalid) {
         this.form.markAllAsTouched();
-      }
-      else {
-        window.location.reload();
       }
 
   }
@@ -88,5 +85,5 @@ interface Details{
   subject:string;
   message:string;
   email:string;
-  reciever:string;
+  receiver:string;
 }
