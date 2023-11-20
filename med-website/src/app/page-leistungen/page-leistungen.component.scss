@@ -49,11 +49,13 @@ button {
 .header-text {
     font-size: 1.7rem;
     display: inline;
+    padding: 0;
 
 }
 
 mat-card-content {
     font-size: 1rem;
+    padding: .5rem .25rem 0 .25rem;
 }
 
 .container {
@@ -110,8 +112,11 @@ a:link {
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 500px){
     .rounded-box button p {
         font-size: 1rem;
+    }
+    .header-text {
+        font-size: 1.4rem;
     }
 }
