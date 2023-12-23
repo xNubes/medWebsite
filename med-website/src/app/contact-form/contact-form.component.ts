@@ -33,43 +33,29 @@ export class ContactFormComponent  {
     );
   }
 
-
-  
-  title = 'EmailTemplate';
-  dataset: Details = {
-    name:'',
-    message:'',
-    subject:'',
-    email:'',
-    receiver:'troumble@gmail.com'
-  };
-
-
   onSubmit(){
-    this.http.post<Details>('http://localhost:8080/testapp/getdetails', this.dataset).subscribe(
-        res => {
-          this.dataset = res;
-          console.log(this.dataset);
-          alert('Email Sent successfully');
-          this.dataset.email = '';
-          this.dataset.name = '';
-          this.dataset.subject = '';
-          this.dataset.message = '';
-          this.dataset.receiver = '';
-        });
-      this.updateValueAndValidity();
-      if (this.form.invalid) {
-        this.form.markAllAsTouched();
-      }
-
-  }
-
-  updateValueAndValidity() {
-    for (let controlName in this.form.controls) {
-      this.form.controls[controlName].updateValueAndValidity;
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
     }
-  }
+    const dataset: Details = {
+      name: this.form.value.nameControl,
+      message: this.form.value.messageControl,
+      subject: this.form.value.subjectControl,
+      email: this.form.value.emailControl,
+      receiver: 'robin@juenemanns.de'
+    }
+    this.http.post<Details>('/api/mail-sender/send-mail', dataset).subscribe(
+        res => {
+          console.log('E-Mail sending succeeded', res);
+          alert('E-Mail wurde versendet');
+          this.form.reset();
+        },err => {
+          console.error('Email sending failed', err);
+          alert('Probleme beim versenden der E-Mail');
+        });
 
+  }
 
 
 resolved(captchaResponse: string) {
@@ -80,6 +66,7 @@ resolved(captchaResponse: string) {
 }
 
 }
+
 interface Details{
   name:string;
   subject:string;
