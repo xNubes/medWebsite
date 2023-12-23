@@ -1,32 +1,32 @@
 <form class="form" [formGroup]="form">
     <mat-form-field class="field">
       <mat-label>Name:</mat-label>
-      <input matInput placeholder="Max Mustermann" id="name" type="text" [(ngModel)]="dataset.name" name="name"  formControlName="nameControl">
+      <input matInput placeholder="Max Mustermann" id="name" type="text" name="name"  formControlName="nameControl">
       <mat-error *ngIf="form.invalid">Bitte geben sie einen Namen ein.</mat-error>
     </mat-form-field>
     
     <mat-form-field class="field">
       <mat-label>E-Mail:</mat-label>
-      <input matInput placeholder="max@mustermann.de" id="email" type="email" [(ngModel)]="dataset.email" name="email"  formControlName="emailControl">
+      <input matInput placeholder="max@mustermann.de" id="email" type="email" name="email"  formControlName="emailControl">
       <mat-error *ngIf="form.invalid">Bitte geben sie eine E-Mail ein.</mat-error>
     </mat-form-field>
     
     <mat-form-field class="field">
       <mat-label>Betreff:</mat-label>
-      <input matInput id="subject" type="text" [(ngModel)]="dataset.subject" name="subject" formControlName="subjectControl" >
+      <input matInput id="subject" type="text" name="subject" formControlName="subjectControl" >
       <mat-error *ngIf="form.invalid">Bitte geben sie einen Betreff ein.</mat-error>
     </mat-form-field>
   
     <mat-form-field class="field">
       <mat-label>Nachricht:</mat-label>
-      <textarea matInput id="message" type="text" [(ngModel)]="dataset.message" name="message" formControlName="messageControl" ></textarea>
+      <textarea matInput id="message" type="text" name="message" formControlName="messageControl" ></textarea>
       <mat-error *ngIf="form.invalid">Bitte geben sie eine Nachricht ein.</mat-error>
     </mat-form-field>  
 </form>
 
 <div class="container">
   <div class="filler"></div>
-  <re-captcha (resolved)="resolved($event)" siteKey={{siteKey}}></re-captcha>
+  <re-captcha (resolved)="resolved($event)" siteKey={{tempKey}}></re-captcha>
   <mat-card-actions *ngIf="allSet">
   <button mat-button class="button" (click)="onSubmit()">Abschicken</button>
   </mat-card-actions>  
